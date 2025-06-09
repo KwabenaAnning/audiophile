@@ -149,9 +149,9 @@
       "slug": "xx99-mark-one-headphones",
       "name": "XX99 Mark I Headphones",
       "image": {
-        "mobile": "/src/assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
-        "tablet": "/src/assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
-        "desktop": "/src/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg"
+        "mobile": "../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
+        "tablet": "../assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
+        "desktop": "../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg"
       },
       "category": "headphones",
       "categoryImage": {
