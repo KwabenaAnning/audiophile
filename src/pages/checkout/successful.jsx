@@ -42,7 +42,7 @@ export default function Success() {
       >
          
         <div className='p-8 flex flex-col gap-6'>
-          <img src='../src/assets/checkout/icon-order-confirmation.svg' alt='Order confirmed' className='w-16 h-16' />
+          <img src='assets/checkout/icon-order-confirmation.svg' alt='Order confirmed' className='w-16 h-16' />
 
           <h3 className='h3 leading-tight'>
             THANK YOU <br /> FOR YOUR ORDER

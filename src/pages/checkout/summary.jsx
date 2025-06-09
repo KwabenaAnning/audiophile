@@ -27,7 +27,7 @@ export default function Summary() {
             
             <div key={slug} className='flex items-center gap-4'>
               <img 
-                src={`../src/assets/cart/image-${slug}.jpg`} 
+                src={`/assets/cart/image-${slug}.jpg`} 
                 alt={name} 
                 className='w-16 h-16 rounded-lg' 
               />

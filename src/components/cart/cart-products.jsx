@@ -16,7 +16,7 @@ export default function CartProducts({ closeCart }) {
         {cartData(cartArr).map(({ slug, name, price }) => (
           <div key={slug} className='grid grid-cols-[auto_1fr_auto] items-center gap-x-4'>
             <img
-              src={`../src/assets/cart/image-${slug}.jpg`}
+              src={`assets/cart/image-${slug}.jpg`}
               alt={name}
               className='w-16 h-16 rounded-lg'
             />
