@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { CSSTransition } from 'react-transition-group'
 
@@ -6,6 +6,9 @@ import CategoriesList from './categories'
 import { Categories } from '../../utils/categories'
 
 export default function Navbar({ isNavOpen, closeNav }) {
+  const overlayRef = useRef(null)
+  const menuRef = useRef(null)
+
   return (
     <>
       <nav className='hidden desktop:flex items-center gap-8'>
@@ -20,14 +23,17 @@ export default function Navbar({ isNavOpen, closeNav }) {
       </nav>
 
       <div className='desktop:hidden'>
+        {isNavOpen && <div>open</div>}
+
         <CSSTransition
           in={isNavOpen}
           timeout={300}
-          classNames="overlay-fade" 
+          classNames="overlay-fade"
           unmountOnExit
+          nodeRef={overlayRef}
         >
-           
           <div
+            ref={overlayRef}
             className='fixed inset-0 z-40 overlay-gradient'
             onClick={closeNav}
             aria-hidden="true"
@@ -37,16 +43,16 @@ export default function Navbar({ isNavOpen, closeNav }) {
         <CSSTransition
           in={isNavOpen}
           timeout={300}
-          classNames="menu-slide" 
+          classNames="menu-slide"
           unmountOnExit
+          nodeRef={menuRef}
         >
-           
           <div 
+            ref={menuRef}
             className='fixed top-[93px] left-0 right-0 z-50 bg-white rounded-b-lg p-8 pt-16'
             role="dialog"
             aria-modal="true"
           >
-             
             <CategoriesList closeNav={closeNav} />
           </div>
         </CSSTransition>

@@ -8,8 +8,7 @@ export default function CategoryProducts({ categoryProducts }) {
   }
 
   return (
-    // This wrapper controls the overall layout and the vertical space between each product section.
-    // `space-y-*` is the ideal way to handle margins between mapped items.
+
     <div className='section-padding mt-16 space-y-32 tablet:mt-28 desktop:mt-40'>
       {categoryProducts.map(({ slug, name, categoryImage, description, isNew, category }) => {
         // Destructuring for cleaner code, though not strictly necessary.
@@ -24,7 +23,6 @@ export default function CategoryProducts({ categoryProducts }) {
             key={slug}
             className="flex flex-col items-center gap-8 text-center desktop:flex-row desktop:gap-32 desktop:even:flex-row-reverse"
           >
-            {/* IMAGE CONTAINER (takes up half the width on desktop) */}
             <picture className="desktop:w-1/2">
               <source
                 srcSet={categoryImage.desktop} media='(min-width: 769px)' />

@@ -40,7 +40,7 @@ export default function Header() {
       <header className="bg-black py-6 px-6 tablet:px-10 desktop:px-40 w-full z-50">
         <div className="flex items-center justify-between relative">
           {width < 769 && (
-            <button onClick={openNav} className="flex flex-col gap-[5px] focus:outline-none">
+            <button onClick={()=>openNav(true)} className="flex flex-col gap-[5px] focus:outline-none">
               <span className="block w-[16px] h-[3px] bg-white" />
               <span className="block w-[16px] h-[3px] bg-white" />
               <span className="block w-[16px] h-[3px] bg-white" />
